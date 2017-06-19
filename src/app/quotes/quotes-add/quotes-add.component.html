@@ -1,0 +1,25 @@
+<h2>Add a new quote:</h2>
+<form (submit)="addQuote()">
+	<p *ngIf="content.invalid && !content.pristine">Quote must be at least 4 characters long.</p>
+	<textarea 
+	name="content"
+	minlength="4"
+	required 
+	[(ngModel)]="newQuote.content"
+	#content='ngModel'
+	>
+		
+	</textarea>
+	<p *ngIf="author.invalid && !author.pristine">Author must be at least 1 characters long.</p>
+	<p>
+		Author: <input 
+		type="text" 
+		minlength="1"
+		required
+		name="author" 
+		[(ngModel)]="newQuote.author"
+		#author='ngModel'
+		>
+	</p>
+	<input type="submit" name="">
+</form>

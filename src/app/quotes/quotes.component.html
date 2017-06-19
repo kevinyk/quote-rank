@@ -1,0 +1,2 @@
+<app-quotes-add (addQuoteEventEmitter)="dataFromChild($event)"  ></app-quotes-add>
+<app-quotes-list [myQuotes]="quotes" (quoteListEventEmitter)="dataFromChildList($event)" (deleteQuoteEventEmitter)="deleteItemInList($event)"></app-quotes-list>
